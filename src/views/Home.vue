@@ -5,6 +5,7 @@
     <our-story />
     <People />
     <Galery />
+    <new-post />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import CountDown from '@/components/CountDown.vue'
 import OurStory from '@/components/OurStory.vue'
 import People from '@/components/People.vue'
 import Galery from '@/components/Galery.vue'
+import NewPost from '@/components/NewPost.vue'
 
 export default {
   name: 'Home',
@@ -24,6 +26,7 @@ export default {
     OurStory,
     People,
     Galery,
+    NewPost,
   }
 }
 </script>

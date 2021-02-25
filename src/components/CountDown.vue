@@ -1,5 +1,5 @@
 <template>
-  <div id="countdown" class="w-full max-h-32 flex flex-col justify-center items-center py-20 my-7">
+  <div id="countdown" class="bg-fixed bg-center bg-cover w-full max-h-32 flex flex-col justify-center items-center py-20 my-7">
     <h2 class="text-gray-100 font-bold text-xl mb-8">COUNT DOWN</h2>
     <div class="grid grid-cols-4 gap-6">
       <div>
@@ -63,6 +63,6 @@ export default {
 
 <style scoped>
   #countdown {
-    background-image: url('~@/assets/bg.png');
+    background-image: url('~@/assets/bg-2.png');
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">    
+  <div id="app" class="w-full font-heebo font-normal">    
     <Navigation />
     <router-view />
     <Footer />
@@ -18,3 +18,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

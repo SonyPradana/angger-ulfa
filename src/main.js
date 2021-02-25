@@ -3,8 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './index.css'
+import VModal from 'vue-js-modal'
 
 Vue.config.productionTip = false
+Vue.use(VModal, { dynamicDefault: { draggable: true, resizable: true } })
 
 new Vue({
   router,

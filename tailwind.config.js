@@ -6,7 +6,11 @@ module.exports = {
       fontFamily: {
         'paris': ['Parisienne', 'cursive'],
         'quiksand': ['Quicksand', 'sans-serif'],
-      }
+        'heebo': ['Heebo', 'sans-serif'],
+      },
+      maxWidth: {
+        '16rem': '16rem',
+       },
     },
   },
   variants: {

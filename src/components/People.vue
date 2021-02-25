@@ -1,5 +1,5 @@
 <template>
-  <div id="people" class="flex flex-col justify-center items-center mt-16 mb-10">
+  <div id="people" class="bg-center bg-cover flex flex-col justify-center items-center mt-16 mb-10">
     <div class="flex justify-center items-center bg-gray-500 text-gray-100 font-bold text-sm rounded-full ring-4 ring-gray-50 w-32 h-32 -mt-16">
       <p>WE JUST MERIED</p>
     </div>
@@ -55,7 +55,7 @@ export default {
 
 <style scoped>
   #people {
-    background-image: url('~@/assets/bg.png');    
+    background-image: url('~@/assets/bg-2.png');    
     clip-path: polygon(100% -64px, 100% 90%, 50% 100%, 0 90%, 0 -64px);
   }
 </style>
