@@ -10,11 +10,11 @@
       <div class="flex flex-row gap-3 bg-gray-900 bg-opacity-60 p-3 rounded"
         v-for="people in peoples" :key='people.id'>
 
-        <img class="rounded-full w-20 h-20 p-1" :src="people.img" :alt="people.name">
+        <img class="rounded-full w-20 h-20 p-1" :src="people.image" :alt="people.nama">
         <div>
-          <p class="text-base text-gray-300">{{ people.message }}</p>
-          <p class="text-base text-gray-200 font-semibold mt-2">{{ people.name }}</p>
-          <p class="text-xs text-gray-400 font-semibold">- {{ people.relation }}</p>
+          <p class="text-base text-gray-300">{{ people.pesan }}</p>
+          <p class="text-base text-gray-200 font-semibold mt-2">{{ people.nama }}</p>
+          <p class="text-xs text-gray-400 font-semibold">- {{ people.kategory }}</p>
         </div>
       </div>
     </div>
@@ -25,30 +25,22 @@
 export default {
   data() {
     return {
-      peoples: [
-        {
-          img: require('@/assets/no-image.png'),
-          name: 'eksan',
-          message: 'selmat ya kalian berdua',
-          relation: 'friend',
-          id: 10
-        },
-        {
-          img: require('@/assets/no-image.png'),
-          name: 'airin',
-          message: 'selamat ya om angger',
-          relation: 'family',
-          id: 1
-        },
-        {
-          img: require('@/assets/no-image.png'),
-          name: 'bela',
-          message: 'selamat ya om angger tente ulfa',
-          relation: 'family',
-          id: 2
-        },
-      ]
+      peoples: []
     }
+  },
+  methods: {
+    async loadPeople() {
+      return await fetch('https://simpuslerep.com/API/v1.0/Caremony/CaremonyMessage.json')
+        .then(respone => respone.json())
+        .then(json => {
+          if (json.status == 'ok') {
+            this.peoples = json.data
+          }
+        })
+    }
+  },
+  mounted() {
+    this.loadPeople()
   },
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <modal name="newPost" height="auto">
-    <form class="flex flex-col gap-1 p-4 bg-gray-50 dark:bg-gray-700" v-on:submit.prevent>
+  <modal name="newPost" height="auto" width="378px">
+    <form class="flex flex-col gap-1 p-4 bg-gray-50 dark:bg-gray-700" v-on:submit="sumbit($event)">
       <h1 class="text-3xl font-bold font-sans text-gray-800 dark:text-gray-300 mb-6">Kirim Pesan</h1>
 
       <label class="flex flex-col gap-2 text-gray-700">
@@ -30,7 +30,7 @@
       </section>
 
       <div class="flex gap-2 mt-3">
-        <button v-on:click="null" class="bg-yellow-400 text-gray-500 rounded px-4 py-2">Kirim</button>
+        <button type="submit" class="bg-yellow-400 text-gray-500 rounded px-4 py-2">Kirim</button>
         <button v-on:click.prevent="closeModal()" class="text-red-500 hover:bg-red-500 hover:text-gray-100 rounded px-4 py-2">Batal</button>
       </div>
 
@@ -47,9 +47,40 @@ export default {
     }
   },
   methods: {
-    sumbit() {},
     closeModal() {
       this.$modal.hide('newPost')
+    },
+    sumbit(e) {    
+      let data = new FormData(e.target);
+      data.append('kategory', this.relation)
+
+      console.log('why bck home');
+      this.postMessage('https://simpuslerep.com/API/v1.0/Caremony/SubmitMessage.json', data)
+      .then(json => {  
+        console.log(json)
+        if (json.status == 'ok') {
+          this.$modal.hide('newPost')
+        } else {
+          this.error = json.error
+          console.log(json.error)
+        }
+      })
+
+      e.preventDefault();      
+    },
+
+    async postMessage(url = '', data = {}) {
+      const fetch_json = await fetch(url, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          // 'Content-Type': 'application/json',
+          "Access-Control-Allow-Origin": "*", 
+          "Access-Control-Allow-Credentials": true
+        },
+        body: data
+      })
+      return fetch_json.json();
     }
   },
 }
