@@ -4,9 +4,12 @@ import router from './router'
 import store from './store'
 import './index.css'
 import VModal from 'vue-js-modal'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 Vue.config.productionTip = false
 Vue.use(VModal, { dynamicDefault: { draggable: true, resizable: true } })
+Vue.use(VueAxios, axios)
 
 new Vue({
   router,

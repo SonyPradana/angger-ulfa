@@ -1,8 +1,6 @@
 <template>
   <div id="app" class="w-full font-heebo font-normal">    
-    <Navigation />
     <router-view />
-    <Footer />
   </div>
 </template>
 

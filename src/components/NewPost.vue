@@ -54,34 +54,19 @@ export default {
       let data = new FormData(e.target);
       data.append('kategory', this.relation)
 
-      console.log('why bck home');
-      this.postMessage('https://simpuslerep.com/API/v1.0/Caremony/SubmitMessage.json', data)
-      .then(json => {  
-        console.log(json)
-        if (json.status == 'ok') {
-          this.$modal.hide('newPost')
-        } else {
-          this.error = json.error
-          console.log(json.error)
-        }
-      })
+      this.axios.post('https://simpuslerep.com/API/v1.0/Caremony/SubmitMessage.json', data, {"x-key": "9mH805h"})
+        .then(response => response.data)
+        .then(json => {
+          if (json.status == 'ok') {
+            this.closeModal()
+          } else {
+            this.error = json.error
+            console.log(json.error)
+          }
+        })
 
       e.preventDefault();      
-    },
-
-    async postMessage(url = '', data = {}) {
-      const fetch_json = await fetch(url, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          // 'Content-Type': 'application/json',
-          "Access-Control-Allow-Origin": "*", 
-          "Access-Control-Allow-Credentials": true
-        },
-        body: data
-      })
-      return fetch_json.json();
     }
-  },
+  }
 }
 </script>

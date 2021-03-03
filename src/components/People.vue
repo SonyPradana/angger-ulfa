@@ -30,8 +30,8 @@ export default {
   },
   methods: {
     async loadPeople() {
-      return await fetch('https://simpuslerep.com/API/v1.0/Caremony/CaremonyMessage.json')
-        .then(respone => respone.json())
+      return await this.axios.get('https://simpuslerep.com/API/v1.0/Caremony/CaremonyMessage.json')
+        .then(respone => respone.data)
         .then(json => {
           if (json.status == 'ok') {
             this.peoples = json.data

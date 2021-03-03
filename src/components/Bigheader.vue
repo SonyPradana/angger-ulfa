@@ -34,7 +34,7 @@
         <img class="rounded-full shadow-md my-2 w-32 h-32" src="@/assets/ulfa.png" alt="ulfa">
         <p class="text-gray-700 font-bold text-base">PENGANTIN</p>
         <p class="text-2xl text-gray-600 font-quiksand my-3 text-center">ULFA MUTOHAROH, S.K.M</p>
-        <p class="max-w-16rem text-center text-sm text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nostrum eum repellat quaerat laudantium distinctio, ipsa nulla ullam earum sequi.</p>
+        <p class="max-w-16rem text-center text-sm text-gray-700">Menikah itu cinta yang diberkahi. awalnya janji, selanjutnya adalah ibadah, penghujungnya insyallah ridha ilahi.</p>
         <ulfa-sosmed class="text-gray-700 text-sm" />
       </div>
       <div class="flex flex-col justify-center items-center p-4 border border-gray-100">
@@ -82,7 +82,7 @@ export default {
 
 <style scoped>
   #header {
-    background-image: url('~@/assets/bg.jpg');    
+    background-image: linear-gradient(0deg, #00000088 20%, #ffffff44 100%), url('~@/assets/bg.jpg');
     clip-path: polygon(100% 0, 100% calc(100vh - 64px), 50% 100%, 0 calc(100vh - 64px), 0 0);
   }
 </style>
