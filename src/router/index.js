@@ -22,6 +22,11 @@ const router = new VueRouter({
       component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     },
     {
+      path: '/anniversary',
+      name: 'Anniversary',
+      component: () => import('../views/Anniversary.vue')
+    },
+    {
       path: '*',
       name: 'NotFound',
       component: () => import('../views/NotFound.vue')

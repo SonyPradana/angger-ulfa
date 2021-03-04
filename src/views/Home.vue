@@ -17,7 +17,6 @@ import Navigation from '@/components/Navigation.vue'
 import BigHeader from '@/components/Bigheader.vue'
 import CountDown from '@/components/CountDown.vue'
 import OurStory from '@/components/OurStory.vue'
-import NewPost from '@/components/NewPost.vue'
 import People from '@/components/People.vue'
 import Galery from '@/components/Galery.vue'
 import Footer from '@/components/Footer.vue'
@@ -31,7 +30,7 @@ export default {
     OurStory,
     People,
     Galery,
-    NewPost,
+    NewPost: () => import('@/components/NewPost.vue'),
     Footer
   }
 }
