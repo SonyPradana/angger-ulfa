@@ -16,7 +16,7 @@
       </div>
     </div>
     <!-- perent info -->
-    <div id="ceremony" class="grid sm:grid-cols-2 grid-cols-1">
+    <div id="ceremony" class="grid sm:grid-cols-2 grid-cols-1 py-4">
       <div class="flex flex-col justify-center items-center p-4 border border-gray-100">
         <p class="text-sm text-gray-600 font-bold">ORANG TUA PENGANTIN</p>
         <p class="text-lg text-gray-500 font-medium text-center border-t-2 border-b-2 border-gray-500 py-1 my-1">Bapak Ismakpul + Ibu Titik</p>
@@ -27,34 +27,34 @@
       </div>
     </div>
     <!-- title invate -->
-    <h2 class="text-center font-bold text-gray-700 py-6 mx-3">KAMI SECARA KHUSUS MENGUNDANG ANDA UNTUK BERBAGI DALAM PERNIKAHAN</h2>
+    <h2 class="text-center font-bold text-gray-700 py-8 mx-3">KAMI SECARA KHUSUS MENGUNDANG ANDA UNTUK BERBAGI DALAM PERNIKAHAN</h2>
     <!-- card profile -->
     <div class="grid sm:grid-cols-2 grid-cols-1">
       <div class="flex flex-col justify-center items-center p-4 border border-gray-100">
         <img class="rounded-full shadow-md my-2 w-32 h-32" src="@/assets/ulfa.png" alt="ulfa">
-        <p class="text-gray-700 font-bold text-base">PENGANTIN</p>
+        <p class="text-gray-700 font-bold text-base mt-2">PENGANTIN</p>
         <p class="text-2xl text-gray-600 font-quiksand my-3 text-center">ULFA MUTOHAROH, S.K.M</p>
         <p class="max-w-16rem text-center text-sm text-gray-700">Menikah itu cinta yang diberkahi. awalnya janji, selanjutnya adalah ibadah, penghujungnya insyallah ridha ilahi.</p>
         <ulfa-sosmed class="text-gray-700 text-sm" />
       </div>
       <div class="flex flex-col justify-center items-center p-4 border border-gray-100">
         <img class="rounded-full shadow-md my-2 w-32 h-32" src="@/assets/angger.png" alt="angger">
-        <p class="text-gray-700 font-bold text-base">MEMPELAI PRIA</p>
+        <p class="text-gray-700 font-bold text-base mt-2">MEMPELAI PRIA</p>
         <p class="text-2xl text-gray-600 font-quiksand my-3 text-center">ANGGER MULIA PRADANA, S.K.M</p>
         <p class="max-w-16rem text-center text-sm text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nostrum eum repellat quaerat laudantium distinctio, ipsa nulla ullam earum sequi.</p>
         <angger-sosmed class="text-gray-700 text-sm" />
       </div>
     </div>
     <!-- card event -->
-    <div class="grid sm:grid-cols-2 grid-cols-1">
-      <div class="border-r border-gray-100 py-4">
-        <p class="text-gray-700 font-bold text-base text-center">ceremony</p>
+    <div class="grid sm:grid-cols-2 grid-cols-1 py-4">
+      <div class="border-r border-gray-100 P-4">
+        <p class="text-gray-700 font-bold text-base text-center mb-2">CAREMONY</p>
         <p class="text-center text-base text-gray-700">Minggu / 28 March 2021</p>
         <p class="text-center text-base text-gray-700">Alina Hotel</p>
         <p class="text-center text-base text-gray-700">Jl. Kh Agus Salim No. 7 Gedongan, Temanggung</p>
       </div>
-      <div class="border-l border-gray-100 py-4">
-        <p class="text-gray-700 font-bold text-base text-center">reception</p>
+      <div class="border-l border-gray-100 P-4">
+        <p class="text-gray-700 font-bold text-base text-center mb-2">RECEPTION</p>
         <p class="text-center text-base text-gray-700">Sabtu / 3 April 2020</p>
         <p class="text-center text-base text-gray-700">Kediaman Bapak Suharso-Warni</p>
         <p class="text-center text-base text-gray-700">Truko, Branjang, Ungaran</p>

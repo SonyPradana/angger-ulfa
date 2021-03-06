@@ -1,22 +1,23 @@
 <template>
-  <div id="countdown" class="bg-fixed bg-center bg-cover w-full max-h-32 flex flex-col justify-center items-center py-20 my-7">
-    <h2 class="text-gray-100 font-bold text-xl mb-8">COUNT DOWN</h2>
+  <div id="countdown" class="bg-fixed bg-center bg-cover w-full flex flex-col justify-center items-center py-10 my-6">
+    <h2 class="text-gray-100 text-opacity-95 font-bold text-lg my-8">COUNTDOWN</h2>
+
     <div class="grid grid-cols-4 gap-6">
       <div>
         <div class="bg-gray-50 text-gray-500 text-2xl text-center font-bold p-4">{{ hari }}</div>
-        <p class="text-center text-gray-100">Day</p>
+        <p class="text-center text-gray-50 text-opacity-75">Day</p>
       </div>
       <div>
         <div class="bg-gray-50 text-gray-500 text-2xl text-center font-bold p-4">{{ jam }}</div>
-        <p class="text-center text-gray-100">Hours</p>
+        <p class="text-center text-gray-50 text-opacity-75">Hours</p>
       </div>
       <div>
         <div class="bg-gray-50 text-gray-500 text-2xl text-center font-bold p-4">{{ menit }}</div>
-        <p class="text-center text-gray-100">Minute</p>
+        <p class="text-center text-gray-50 text-opacity-75">Minute</p>
       </div>
       <div>
         <div class="bg-gray-50 text-gray-500 text-2xl text-center font-bold p-4">{{ detik }}</div>
-        <p class="text-center text-gray-100">Second</p>
+        <p class="text-center text-gray-50 text-opacity-75">Second</p>
       </div>
     </div>
   </div>  
