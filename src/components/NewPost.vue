@@ -54,10 +54,15 @@ export default {
       let data = new FormData(e.target);
       data.append('kategory', this.relation)
 
-      this.axios.post('https://simpuslerep.com/API/v1.0/Caremony/SubmitMessage.json', data, {"x-key": "9mH805h"})
+      this.axios.post('https://simpuslerep.com/api/v1.0/Caremony/SubmitMessage.json', data, {
+          headers: {
+            // "Access-Control-Allow-Origin": "*"
+          }
+        })
         .then(response => response.data)
         .then(json => {
-          if (json.status == 'ok') {
+          if (json.status == 'ok') {            
+            this.$store.commit('loadPeople')
             this.closeModal()
           } else {
             this.error = json.error

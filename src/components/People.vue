@@ -8,7 +8,7 @@
     </div>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-y-4 gap-x-10 mb-32 px-10 max-h-80">
       <div class="flex flex-row gap-3 bg-gray-900 bg-opacity-60 p-3 rounded"
-        v-for="people in peoples" :key='people.id'>
+        v-for="people in this.$store.state.peoples" :key='people.id'>
 
         <img class="rounded-full w-20 h-20 p-1" :src="people.image" :alt="people.nama">
         <div>
@@ -23,25 +23,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      peoples: []
-    }
-  },
-  methods: {
-    async loadPeople() {
-      return await this.axios.get('https://simpuslerep.com/API/v1.0/Caremony/CaremonyMessage.json')
-        .then(respone => respone.data)
-        .then(json => {
-          if (json.status == 'ok') {
-            this.peoples = json.data
-          }
-        })
-    }
-  },
   mounted() {
-    this.loadPeople()
-  },
+    // this.loadPeople()
+    this.$store.commit('loadPeople')
+  }
 }
 </script>
 
