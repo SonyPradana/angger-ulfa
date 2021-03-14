@@ -6,8 +6,8 @@
     <div class="border-gray-200 border-b-2 px-8 my-4">
       <p class="text-gray-100 text-lg font-bold border-gray-400 border-b-4 -my-1">Our Family / Friend / Guest</p>
     </div>
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-y-4 gap-x-10 mb-32 px-10 max-h-80">
-      <div class="flex flex-row gap-3 bg-gray-900 bg-opacity-60 p-3 rounded"
+    <div class="grid grid-rows-3 grid-flow-col gap-y-4 gap-x-10 mb-32 px-10 max-h-80 overflow-x-auto lg:overflow-x-hidden w-96 lg:w-auto scroll-snap-x ">
+      <div class="flex flex-row gap-3 bg-gray-900 bg-opacity-60 p-3 rounded w-80"
         v-for="people in this.$store.state.peoples" :key='people.id'>
 
         <img class="rounded-full w-20 h-20 p-1" :src="people.image" :alt="people.nama">

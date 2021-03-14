@@ -1,7 +1,7 @@
 <template>
   <div>    
     <!-- title and image -->
-    <div id="header" class="flex flex-col items-center py-8 h-screen w-auto z-50">
+    <div id="header" class="flex flex-col items-center py-8 h-screen w-auto z-50 bg-center">
       <div class="w-96 text-center mt-24">
         <div class="text-gray-100 text-2xl font-paris font-semibold italic tracking-widest">The Wedding Selebration of</div>
         <div class="text-gray-100 text-4xl font-quiksand font-semibold mt-4 mb-2">
@@ -19,11 +19,11 @@
     <div id="ceremony" class="grid sm:grid-cols-2 grid-cols-1 py-4">
       <div class="flex flex-col justify-center items-center p-4 border border-gray-100">
         <p class="text-sm text-gray-600 font-bold">ORANG TUA PENGANTIN</p>
-        <p class="text-lg text-gray-500 font-medium text-center border-t-2 border-b-2 border-gray-500 py-1 my-1">Bapak Ismakpul + Ibu Titik</p>
+        <p class="text-lg text-gray-500 font-medium text-center border-double border-t-4 border-b-4 border-gray-400 py-1 my-1">Bapak Ismakpul + Ibu Titik</p>
       </div>
       <div class="flex flex-col justify-center items-center p-4 border border-gray-100">
         <p class="text-sm text-gray-600 font-bold">ORANG TUA MEMPELAI PRIA</p>
-        <p class="text-lg text-gray-500 font-medium text-center border-t-2 border-b-2 border-gray-500 py-1 my-1">Bapak Suharso + Ibu Warni</p>
+        <p class="text-lg text-gray-500 font-medium text-center border-double border-t-4 border-b-4 border-gray-400 py-1 my-1">Bapak Suharso + Ibu Warni</p>
       </div>
     </div>
     <!-- title invate -->
@@ -46,7 +46,7 @@
       </div>
     </div>
     <!-- card event -->
-    <div class="grid sm:grid-cols-2 grid-cols-1 py-4">
+    <div class="grid sm:grid-cols-2 grid-cols-1 gap-3 py-4">
       <div class="border-r border-gray-100 P-4">
         <p class="text-gray-700 font-bold text-base text-center mb-2">CAREMONY</p>
         <p class="text-center text-base text-gray-700">Minggu / 28 March 2021</p>
@@ -82,7 +82,10 @@ export default {
 
 <style scoped>
   #header {
-    background-image: linear-gradient(0deg, #00000088 20%, #ffffff44 100%), url('~@/assets/bg.jpg');
+    background-image: 
+      linear-gradient(0deg, #00000088 20%, #ffffff44 100%), 
+      url('~@/assets/bg-1.jpg');
+
     clip-path: polygon(100% 0, 100% calc(100vh - 64px), 50% 100%, 0 calc(100vh - 64px), 0 0);
   }
 </style>

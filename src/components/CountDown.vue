@@ -1,6 +1,6 @@
 <template>
-  <div id="countdown" class="bg-fixed bg-center bg-cover w-full flex flex-col justify-center items-center py-10 my-6">
-    <h2 class="text-gray-100 text-opacity-95 font-bold text-lg my-8">COUNTDOWN</h2>
+  <div id="countdown" class="bg-local bg-center bg-cover w-full flex flex-col justify-center items-center py-8 my-3 h-96">
+    <h2 class="text-gray-100 text-opacity-95 font-bold text-lg my-6">COUNTDOWN</h2>
 
     <div class="grid grid-cols-4 gap-6">
       <div>
@@ -64,6 +64,6 @@ export default {
 
 <style scoped>
   #countdown {
-    background-image: url('~@/assets/bg-2.png');
+    background-image: url('~@/assets/ring.jpeg');
   }
 </style>
