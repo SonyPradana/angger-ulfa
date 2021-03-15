@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 my-3 mx-1 border border-gray-200 rounded-2xl" v-show="!this.$store.state.covid_agreement">
+  <div class="p-6 my-4 border border-gray-200 rounded-2xl max-w-lg mx-2 sm:mx-2 md:mx-auto lg:mx-auto xl:mx-auto" v-show="!this.$store.state.covid_agreement">
     <div class="max-w-2xl text-left">
       Mengingat kondisi & situasi dengan adanya pendemi covid 19.
       Tanpa mengurangi rasa hormat & sesuai anjuran pemerintah, resespi penikahan hanya dihadiri keluarga & undangan yang terbatas.

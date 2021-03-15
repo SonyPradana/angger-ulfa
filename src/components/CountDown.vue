@@ -5,19 +5,19 @@
     <div class="grid grid-cols-4 gap-6">
       <div>
         <div class="bg-gray-50 text-gray-500 text-2xl text-center font-bold p-4">{{ hari }}</div>
-        <p class="text-center text-gray-50 text-opacity-75">Day</p>
+        <p class="text-center text-gray-50 text-opacity-75">Hari</p>
       </div>
       <div>
         <div class="bg-gray-50 text-gray-500 text-2xl text-center font-bold p-4">{{ jam }}</div>
-        <p class="text-center text-gray-50 text-opacity-75">Hours</p>
+        <p class="text-center text-gray-50 text-opacity-75">Jam</p>
       </div>
       <div>
         <div class="bg-gray-50 text-gray-500 text-2xl text-center font-bold p-4">{{ menit }}</div>
-        <p class="text-center text-gray-50 text-opacity-75">Minute</p>
+        <p class="text-center text-gray-50 text-opacity-75">Menit</p>
       </div>
       <div>
         <div class="bg-gray-50 text-gray-500 text-2xl text-center font-bold p-4">{{ detik }}</div>
-        <p class="text-center text-gray-50 text-opacity-75">Second</p>
+        <p class="text-center text-gray-50 text-opacity-75">Detik</p>
       </div>
     </div>
   </div>  

@@ -1,10 +1,10 @@
 <template>
-  <div id="our-story" class="flex justify-center items-center flex-col">
+  <div id="our-story" ref="panel" class="flex justify-center items-center flex-col">
     <img class="w-32 h-32" src="@/assets/our-story.png" alt="our-story">
     <p class="text-center text-gray-600 font-base max-w-sm mt-2">{{ qoute }}</p>
     <!-- time line -->
     <div id='time-line' class="flex flex-col gap-8 my-8 text-right">
-      <div class="snap-left one flex md:flex-row-reverse justify-center items-center flex-col gap-4">
+      <div ref="snapOne" class="flex md:flex-row-reverse justify-center items-center flex-col gap-4">
         <div class="flex-grow w-80"></div>
         <img class="flex-shrink w-32 h-32 rounded-full shadow-lg" src="@/assets/id.png" alt="" srcset="">
         <div class="snap-text flex-grow w-80">
@@ -14,7 +14,7 @@
         </div>
       </div>
       
-      <div class="snap-right two flex md:flex-row justify-center items-center flex-col gap-4">
+      <div ref="snapTwo" class="snap-right two flex md:flex-row justify-center items-center flex-col gap-4">
         <div class="flex-grow w-80"></div>
         <img class="flex-shrink w-32 h-32 rounded-full shadow-lg" src="@/assets/id.png" alt="" srcset="">
         <div class="snap-text flex-grow w-80">
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div class="snap-left three flex md:flex-row-reverse justify-center items-center flex-col gap-4">
+      <div ref="snapThree" class="flex md:flex-row-reverse justify-center items-center flex-col gap-4">
         <div class="flex-grow w-80"></div>
         <img class="flex-shrink w-32 h-32 rounded-full shadow-lg" src="@/assets/id.png" alt="" srcset="">
         <div class="snap-text flex-grow w-80">
@@ -49,15 +49,15 @@ export default {
       qoute: 'Pernikahan adalah komitmen bersama untuk mencintai tanpa kondisi dan tanggal kadaluarsa',
       meet: {
         date: 'Selasa, 5 Agustus 2014',
-        text: 'Pertama kali bertemu saat itu saat masuk kuliah semester 1 di kampus kami di jogjakarta, saat itu kami belum mengenal satu sama lain sampai beberapa minggu kemudaian kami saling bertegur sapa.'
+        text: 'Pertama kali bertemu saat itu saat masuk kuliah semester 1 di kampus kami di jogjakarta, saat itu kami belum mengenal satu sama lain sampai beberapa minggu kemudian kami saling bertegur sapa.'
       },
       frist: {
         date: 'Sabtu, 4 Maret 2017',
-        text: 'Kemudian kami memberanikan diri memutuskan untuk menjalin hubungan lebih dekat setalah 3 tahun menjadi sahabat bersama.'
+        text: 'Kemudian kami memberanikan diri memutuskan untuk menjalin hubungan lebih dekat setelah 3 tahun menjadi sahabat bersama.'
       },
       relation: {
         date: 'Minggu, 18 Oktober 2020',
-        text: 'Alhamdulillah deberikan kepercayaan untuk melamar dia pada hari sangat berbagia dan dinanti-nanti. Terimaksih untuk Dia telah sabar dan menerima setalah penantian panjang Kami bersama.'
+        text: 'Alhamdulillah diberikan kepercayaan untuk melamar dia pada hari sangat berbagia dan dinanti-nanti. Trimaksih untuk Dia telah sabar dan menerima setalah penantian panjang Kami bersama.'
       }
     }
   },
@@ -87,9 +87,9 @@ export default {
     }
   },
   mounted() {
-    this.startSnap('.snap-left.one', false, '#our-story')
-    this.startSnap('.snap-right.two', true, '#our-story')
-    this.startSnap('.snap-left.three', false, '#our-story')    
+    this.startSnap(this.$refs.snapOne, false, this.$refs.panel)
+    this.startSnap(this.$refs.snapTwo, true, this.$refs.panel)
+    this.startSnap(this.$refs.snapThree, false, this.$refs.panel)    
   },
 }
 </script>
