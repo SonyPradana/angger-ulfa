@@ -1,7 +1,7 @@
 <template>
   <div>    
     <!-- title and image -->
-    <div id="header" class="flex flex-col items-center py-8 h-screen w-auto z-50 bg-center">
+    <div id="header" class="flex flex-col items-center py-8 h-screen max-h-700 w-auto z-50 bg-center">
       <div class="w-96 text-center sm:mt-36 md:mt-32 lg:mt-28 mt-32">
         <div class="text-gray-100 text-2xl font-paris font-semibold italic tracking-widest">The Wedding Selebration of</div>
         <div class="text-gray-100 text-4xl font-quiksand font-semibold mt-4 mb-2">
@@ -34,14 +34,14 @@
         <img class="rounded-full shadow-md my-2 w-32 h-32" src="@/assets/ulfa.png" alt="ulfa">
         <p class="text-gray-700 font-bold text-base mt-2">PENGANTIN</p>
         <p class="text-2xl text-gray-600 font-quiksand my-3 text-center">ULFA MUTOHAROH, S.K.M</p>
-        <p class="max-w-16rem text-center text-sm text-gray-700">Menikah itu cinta yang diberkahi. awalnya janji, selanjutnya adalah ibadah, penghujungnya insyallah ridha ilahi.</p>
+        <p class="max-w-64 text-center text-sm text-gray-700">Menikah itu cinta yang diberkahi. awalnya janji, selanjutnya adalah ibadah, penghujungnya insyallah ridha ilahi.</p>
         <ulfa-sosmed class="text-gray-700 text-sm" />
       </div>
       <div class="flex flex-col justify-start items-center p-4 border border-gray-100">
         <img class="rounded-full shadow-md my-2 w-32 h-32" src="@/assets/angger.png" alt="angger">
         <p class="text-gray-700 font-bold text-base mt-2">MEMPELAI PRIA</p>
         <p class="text-2xl text-gray-600 font-quiksand my-3 text-center">ANGGER MULIA PRADANA, S.K.M</p>
-        <p class="max-w-16rem text-center text-sm text-gray-700">Menikah selain menjadi ibadah untuk selamanya, juga menjadi langkah menjadi manusia terbaik, karena akhlak terbaik kepada istri dan keluarga</p>
+        <p class="max-w-64 text-center text-sm text-gray-700">Menikah selain menjadi ibadah untuk selamanya, juga menjadi langkah menjadi manusia terbaik, karena akhlak terbaik kepada istri dan keluarga</p>
         <angger-sosmed class="text-gray-700 text-sm" />
       </div>
     </div>

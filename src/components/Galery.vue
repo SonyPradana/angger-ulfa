@@ -1,5 +1,6 @@
 <template>
   <div id="galery" class="flex justify-center items-center gap-10 flex-col my-6">
+    <MyVideo />
     <img class="w-32 h-32" src="@/assets/galery.png" alt="our-story">
     <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5">
       <div class="h-40 w-40 transform"
@@ -11,6 +12,8 @@
 </template>
 
 <script>
+import MyVideo from '@/components/video.vue'
+
 export default {
   data() {
     return {
@@ -28,5 +31,8 @@ export default {
       ]
     }
   },
+  components: {
+    MyVideo
+  }
 }
 </script>

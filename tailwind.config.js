@@ -9,8 +9,17 @@ module.exports = {
         'heebo': ['Heebo', 'sans-serif'],
       },
       maxWidth: {
-        '16rem': '16rem',
-       },
+        '64': '16rem',
+      },
+      maxHeight: {
+        '700': '44rem',
+      },
+      minHeight: {
+        '16': '4rem',
+      },
+      minHeight: {
+        '16': '4rem',
+      },
     },
   },
   variants: {

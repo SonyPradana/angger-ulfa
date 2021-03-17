@@ -1,5 +1,5 @@
 <template>
-  <div id="our-story" ref="panel" class="flex justify-center items-center flex-col">
+  <div id="our-story" ref="panel" class="flex justify-center items-center flex-col overflow-hidden">
     <img class="w-32 h-32" src="@/assets/our-story.png" alt="our-story">
     <p class="text-center text-gray-600 font-base max-w-sm mt-2">{{ qoute }}</p>
     <!-- time line -->
