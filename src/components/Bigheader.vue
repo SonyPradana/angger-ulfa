@@ -30,14 +30,14 @@
     <h2 class="text-center font-bold text-gray-700 py-8 mx-3">KAMI SECARA KHUSUS MENGUNDANG ANDA UNTUK BERBAGI DALAM PERNIKAHAN</h2>
     <!-- card profile -->
     <div class="grid sm:grid-cols-2 grid-cols-1">
-      <div class="flex flex-col justify-start items-center p-4 border border-gray-100">
+      <div ref="trigger" class="flex flex-col justify-start items-center p-4 border border-gray-100">
         <img class="rounded-full shadow-md my-2 w-32 h-32" src="@/assets/ulfa.png" alt="ulfa">
         <p class="text-gray-700 font-bold text-base mt-2">PENGANTIN</p>
         <p class="text-2xl text-gray-600 font-quiksand my-3 text-center">ULFA MUTOHAROH, S.K.M</p>
         <p class="max-w-64 text-center text-sm text-gray-700">Menikah itu cinta yang diberkahi. awalnya janji, selanjutnya adalah ibadah, penghujungnya insyallah ridha ilahi.</p>
         <ulfa-sosmed class="text-gray-700 text-sm" />
       </div>
-      <div class="flex flex-col justify-start items-center p-4 border border-gray-100">
+      <div ref="trigger2" class="flex flex-col justify-start items-center p-4 border border-gray-100">
         <img class="rounded-full shadow-md my-2 w-32 h-32" src="@/assets/angger.png" alt="angger">
         <p class="text-gray-700 font-bold text-base mt-2">MEMPELAI PRIA</p>
         <p class="text-2xl text-gray-600 font-quiksand my-3 text-center">ANGGER MULIA PRADANA, S.K.M</p>
@@ -47,13 +47,13 @@
     </div>
     <!-- card event -->
     <div class="grid sm:grid-cols-2 grid-cols-1 gap-3 py-4">
-      <div class="border-r border-gray-100 P-4">
+      <div ref="trigger3" class="border-r border-gray-100 P-4">
         <p class="text-gray-700 font-bold text-base text-center mb-2">CAREMONY</p>
         <p class="text-center text-base text-gray-700">Minggu / 28 Maret 2021</p>
         <p class="text-center text-base text-gray-700">Aliana Hotel & Resto</p>
         <p class="text-center text-base text-gray-700">Jl. Kh Agus Salim No. 7 Gedongan, Temanggung</p>
       </div>
-      <div class="border-l border-gray-100 P-4">
+      <div ref="trigger4" class="border-l border-gray-100 P-4">
         <p class="text-gray-700 font-bold text-base text-center mb-2">RECEPTION</p>
         <p class="text-center text-base text-gray-700">Sabtu / 3 April 2020</p>
         <p class="text-center text-base text-gray-700">Kediaman Bapak Suharso-Warni</p>
@@ -66,6 +66,10 @@
 <script>
 import AnggerSosmed from '@/components/sosial_media/angger.vue'
 import UlfaSosmed from '@/components/sosial_media/ulfa.vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   components: {
@@ -76,6 +80,33 @@ export default {
     showModal() {
       this.$modal.show('newPost')
     }
+  },
+  mounted() {
+    const trigger = [
+      this.$refs.trigger, 
+      this.$refs.trigger2,
+      this.$refs.trigger3,
+      this.$refs.trigger4,
+      ]
+
+    gsap.from(trigger, {
+      scale: .4,
+      opacity: .2,
+      duration: 1,
+      scrub: 0.5,
+      
+      scrollTrigger: {
+        trigger: '#ceremony',
+        toggleActions: "restart none reverse pause",
+        start: "top center",
+        end: "bottom center",
+
+        autoAlpha: 1, 
+        ease: "power1.in",
+        overwrite: "auto",
+
+      }
+    })
   },
   }
 </script>
