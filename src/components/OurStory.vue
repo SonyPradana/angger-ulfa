@@ -64,35 +64,43 @@ export default {
       }
     }
   },
-  methods: {
-    startSnap(target, rtl, trigger = target) {
-      gsap.fromTo(target, {
-        x: rtl ? 100 : -100,
-        opacity: 0
-      }, {        
-        x: 0,
-        opacity: 1,
-        duration: 2.5,
-        scrub: true,
-
-        scrollTrigger: {
-          trigger: trigger,
-          toggleActions: "restart none reverse pause",
-          start: "top center",
-          // end: "bottom center",
-          end: "+=150",
-
-          autoAlpha: 1, 
-          ease: "power1.in",
-          overwrite: "auto",
-        },
-      })
-    }
-  },
+  methods: {},
   mounted() {
-    this.startSnap(this.$refs.snapOne, false, this.$refs.panel)
-    this.startSnap(this.$refs.snapTwo, true, this.$refs.panel)
-    this.startSnap(this.$refs.snapThree, false, this.$refs.panel)    
+    const tl = gsap.timeline()
+    tl.from(this.$refs.snapOne, {
+      x: -100,
+      opacity: 0,
+      duration: 1.2,
+      scale: .8,
+      scrub: .5
+      })
+    tl.from(this.$refs.snapTwo, {
+      x: 100,
+      opacity: 0,
+      duration: 1.2,
+      scale: .8,
+      scrub: .5
+      })
+    tl.from(this.$refs.snapThree, {
+      x: -100,
+      opacity: 0,
+      duration: 1.2,
+      scale: .8,
+      scrub: .5
+      })
+
+    ScrollTrigger.create({
+      trigger: this.$refs.panel,
+      animation: tl,
+      toggleActions: "restart none reverse pause",
+      start: "top center",
+      // end: "bottom center",
+      end: "+=150",
+
+      autoAlpha: 1, 
+      ease: "power1.in",
+      overwrite: "auto",
+    })
   },
 }
 </script>

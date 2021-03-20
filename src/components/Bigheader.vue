@@ -88,27 +88,33 @@ export default {
       this.$refs.trigger3,
       this.$refs.trigger4,
       ]
-
-    gsap.from(trigger, {
+    
+    const tl = gsap.timeline()
+    const option = {
       scale: .4,
-      opacity: .2,
-      duration: 1,
-      scrub: 0.5,
-      
-      scrollTrigger: {
-        trigger: '#ceremony',
-        toggleActions: "restart none reverse pause",
-        start: "top center",
-        end: "bottom center",
+      opacity: .05,
+      duration: .75,
+      scrub: .4,
+    }
 
-        autoAlpha: 1, 
-        ease: "power1.in",
-        overwrite: "auto",
+    tl.from(trigger[0], option)
+    tl.from(trigger[1], option)
+    tl.from(trigger[2], option)
+    tl.from(trigger[3], option)
 
-      }
+    ScrollTrigger.create({
+      trigger: '#ceremony',
+      animation: tl,
+      toggleActions: "restart none reverse pause",
+      start: "top center",
+      end: "bottom center",
+
+      autoAlpha: 1, 
+      ease: "power1.in",
+      overwrite: "auto",
     })
   },
-  }
+}
 </script>
 
 <style scoped>

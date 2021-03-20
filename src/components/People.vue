@@ -11,7 +11,7 @@
       <div class="flex flex-row gap-3 bg-pink-900 bg-opacity-60 p-2 rounded-md w-80 shadow-lg"
         v-for="people in this.$store.state.peoples" :key='people.id'>
 
-        <img class="rounded-full w-16 h-16 p-1 m-1 ring ring-pink-600" :src="people.image" :alt="people.nama">
+        <img class="animate-pulse rounded-full w-16 h-16 p-1 m-1 ring ring-pink-600" :src="people.image" :alt="people.nama">        
         <div>
           <p class="text-base text-gray-300">{{ people.pesan }}</p>
           <p class="text-base text-gray-200 font-semibold mt-2">{{ people.nama }}</p>
