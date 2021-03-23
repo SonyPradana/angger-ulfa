@@ -6,9 +6,9 @@
     <div id='time-line' class="flex flex-col gap-8 my-8 text-right">
       <div ref="snapOne" class="flex md:flex-row-reverse justify-center items-center flex-col gap-4">
         <div class="flex-grow w-80"></div>
-        <img class="flex-shrink w-32 h-32 rounded-full shadow-lg" :src="meet.image" alt="frist meet">
+        <img class="flex-shrink w-32 h-32 rounded-full shadow-lg" :src="meet.image" alt="first meet">
         <div class="snap-text flex-grow w-80">
-          <p class="font-bold text-base text-center md:text-right">Frist We Meet</p>
+          <p class="font-bold text-base text-center md:text-right">First We Meet</p>
           <p class="text-gray-500 text-xs my-2 text-center md:text-right">{{ meet.date }}</p>
           <p class="text-gray-600 text-base text-center md:text-right max-w-lg">{{ meet.text }}</p>
         </div>
@@ -16,11 +16,11 @@
       
       <div ref="snapTwo" class="snap-right two flex md:flex-row justify-center items-center flex-col gap-4">
         <div class="flex-grow w-80"></div>
-        <img class="flex-shrink w-32 h-32 rounded-full shadow-lg" :src="frist.image" alt="frist date">
+        <img class="flex-shrink w-32 h-32 rounded-full shadow-lg" :src="first.image" alt="first date">
         <div class="snap-text flex-grow w-80">
-          <p class="font-bold text-base text-center md:text-left">Frist Date</p>
-          <p class="text-gray-500 text-xs my-2 text-center md:text-left">{{ frist.date }}</p>
-          <p class="text-gray-600 text-base text-center md:text-left max-w-lg">{{ frist.text }}</p>
+          <p class="font-bold text-base text-center md:text-left">First Date</p>
+          <p class="text-gray-500 text-xs my-2 text-center md:text-left">{{ first.date }}</p>
+          <p class="text-gray-600 text-base text-center md:text-left max-w-lg">{{ first.text }}</p>
         </div>
       </div>
 
@@ -52,7 +52,7 @@ export default {
         date: 'Selasa, 5 Agustus 2014',
         text: 'Pertama kali bertemu saat itu saat masuk kuliah semester 1 di kampus kami di jogjakarta, saat itu kami belum mengenal satu sama lain sampai beberapa minggu kemudian kami saling bertegur sapa.'
       },
-      frist: {        
+      first: {        
         image: require('@/assets/annivesary/satu.jpg'),
         date: 'Sabtu, 4 Maret 2017',
         text: 'Kemudian kami memberanikan diri memutuskan untuk menjalin hubungan lebih dekat setelah 3 tahun menjadi sahabat bersama.'

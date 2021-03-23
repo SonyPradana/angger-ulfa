@@ -8,14 +8,18 @@
     </div>
     <div class="grid grid-rows-3 grid-flow-col gap-y-4 gap-x-10 mb-32 px-10  overflow-x-auto lg:overflow-x-hidden w-96 lg:w-auto scroll-snap-x">
       
-      <div class="flex flex-row gap-3 bg-pink-900 bg-opacity-60 p-2 rounded-md w-80 shadow-lg"
+      <div class="flex flex-row gap-3 bg-pink-900 bg-opacity-60 p-3 rounded-md w-80 lg:w-96 shadow-lg"
         v-for="people in this.$store.state.peoples" :key='people.id'>
 
         <img class="animate-pulse rounded-full w-16 h-16 p-1 m-1 ring ring-pink-600" :src="people.image" :alt="people.nama">        
-        <div>
-          <p class="text-base text-gray-300">{{ people.pesan }}</p>
-          <p class="text-base text-gray-200 font-semibold mt-2">{{ people.nama }}</p>
-          <p class="text-xs text-gray-400 font-semibold">- {{ people.kategory }}</p>
+        <div class="flex justify-between flex-col">
+          <div class=" max-h-16 overflow-y-auto">
+            <p class="text-base text-gray-300">{{ people.pesan }}</p>
+          </div>
+          <div class="my-2">
+            <p class="text-base text-gray-200 font-semibold">{{ people.nama }}</p>
+            <p class="text-xs text-gray-400 font-semibold">- {{ people.kategory }}</p>
+          </div>
         </div>
       </div>
 

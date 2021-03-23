@@ -48,14 +48,14 @@
     <!-- card event -->
     <div class="grid sm:grid-cols-2 grid-cols-1 gap-3 py-4">
       <div ref="trigger3" class="border-r border-gray-100 P-4">
-        <p class="text-gray-700 font-bold text-base text-center mb-2">CAREMONY</p>
+        <p class="text-gray-700 font-bold text-base text-center mb-2">CEREMONY</p>
         <p class="text-center text-base text-gray-700">Minggu / 28 Maret 2021</p>
         <p class="text-center text-base text-gray-700">Aliana Hotel & Resto</p>
         <p class="text-center text-base text-gray-700">Jl. Kh Agus Salim No. 7 Gedongan, Temanggung</p>
       </div>
       <div ref="trigger4" class="border-l border-gray-100 P-4">
         <p class="text-gray-700 font-bold text-base text-center mb-2">RECEPTION</p>
-        <p class="text-center text-base text-gray-700">Sabtu / 3 April 2020</p>
+        <p class="text-center text-base text-gray-700">Sabtu / 3 April 2021</p>
         <p class="text-center text-base text-gray-700">Kediaman Bapak Suharso-Warni</p>
         <p class="text-center text-base text-gray-700">Truko, Branjang, Ungaran</p>
       </div>
